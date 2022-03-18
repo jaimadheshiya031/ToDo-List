@@ -2,6 +2,7 @@ const express=require('express');
 const bodyParser=require('body-parser');
 const path=require('path');
 const mongoose=require('mongoose');
+const _ =require("lodash");
 
 const app=express();
 
@@ -66,7 +67,7 @@ app.get('/:id',(req,res)=>{
         }
         else {
         res.render("list",{
-            listTitle:listName,
+            listTitle:_.capitalize(listName),
             work:founditem
         });
              }
@@ -130,9 +131,9 @@ app.get('/about',(req,res)=>{
     res.render("about");
 });
 
-
-app.listen(3000,()=>{
-    console.log("Server started running on port 3000");
-});
+let port= process.env.PORT;
+if(port=="" || port==null)
+port=3000;
+app.listen(port);
 
 
