@@ -1,6 +1,6 @@
 html {
     background-color: #E4E9FD;
-    background-image: -webkit-linear-gradient(65deg, #789395 50%, #B4CFB0 50%);
+    background-image:linear-gradient(to right,  #ff6e7f , #bfe9ff);
     min-height: 1000px;
     font-family: 'helvetica neue';
   }
@@ -92,6 +92,11 @@ html {
   footer {
     color: white;
     color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
   }
   
